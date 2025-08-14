@@ -1,2 +1,4 @@
 # fullstack_aulas
-Atividades desenvolvidas em sala de aula na FEI, disciplina de fullstack.
+Repositório das atividades desenvolvidas na disciplina de fullstack da FEI.
+
+Autor(a): Lauanda Nobre
