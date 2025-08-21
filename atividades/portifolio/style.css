@@ -1,0 +1,52 @@
+body{
+    background-color: aliceblue;
+}
+/*Pseudo-Elemento*/
+body::selection {
+  background-color: rgba(116, 4, 208, 0.612);
+  color: whitesmoke;
+}
+p{
+    color: rgb(35, 35, 35);
+}
+#title{
+    color: rgb(183, 116, 245);
+}
+#curso{
+    color: blueviolet;   
+}
+.menu_option:visited{
+    color:rgb(253, 163, 29);
+    cursor: pointer;
+}
+.table_column:hover{
+    
+    cursor: default;
+}
+.my_span_color{
+    color: blueviolet;
+    font-weight: 600;
+}
+.img_port{
+    width: 18%;
+}
+.subtitle{
+    color: darkviolet;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+#title_projects{
+    color: darkviolet;
+}
+.table_column{
+    border: 2px solid black;
+    background-color: rgba(141, 20, 255, 0.565);
+    color: whitesmoke;
+    text-align: center;
+    padding: 2px;
+}
+.table_row{
+    border: 2px solid black;
+    background-color: rgba(130, 14, 238, 0.405);
+    text-align: center;
+}

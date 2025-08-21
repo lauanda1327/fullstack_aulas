@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Lauanda Nobre</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <a href="./index.html" class="menu_option">Home</a>
+        <a href="./projects.html" class="menu_option">Projetos</a>
+    </nav>
     <!-- Título -->
-    <h1>Lauanda Nobre</h1>
-    <h2>Estudante de Ciência da Computação</h2>
+    <h1 id="title">Lauanda Nobre</h1>
+    <h2 id="curso">Estudante de Ciência da Computação</h2>
 
     <!-- Minha Imagem -->
     <img src="imagens/minha_foto.webp" alt="Imagem de Lauanda Nobre" width="400">
 
     <!-- Sobre mim -->
-    <p>Olá! Eu sou Lauanda Nobre, atualmente sou estudante de Ciência da Computação e este é o início do meu portfólio profissional.</p>
+    <p>Olá! Eu sou <span class="my_span_color">Lauanda Nobre</span>, atualmente sou estudante de <span class="my_span_color">Ciência da Computação</span> e este é o início do meu portfólio profissional.</p>
     <p>Sou formada em TI pelo IFBA, e gosto de aprender sobre desenvolvimento fullstack, design de softwares, bots de automação, investimentos e novas linguagens de programação que me ajudem a projetar e construir projetos interessantes, produtivos e eficientes.</p>
     <p>Este site será meu portfólio pessoal para compartilhar meus trabalhos e aprendizados.</p>
 
@@ -36,11 +41,11 @@
     <!-- Imagens que gosto -->
     <h3>Algumas imagens que gosto e valem a pena conferir:</h3>
     <p>Aqui estão algumas coisas que eu gosto:  viagens, natureza, tecnologia e meus projetos.</p>
-    <img src="imagens/eu.jpg" alt="Imagem minha" width="300">
-    <img src="imagens/gato.jpg" alt="Imagem do gato" width="300">
-    <img src="imagens/arduino.jpg" alt="Imagem de arduino" width="300">
-    <img src="imagens/jogo.jpg" alt="Imagem do projeto de jogo" width="300">
-    <img src="imagens/barragem.jpg" alt="Imagem de barragem de água" width="300">
+    <img src="imagens/eu.jpg" alt="Imagem minha" class="img_port">
+    <img src="imagens/gato.jpg" alt="Imagem do gato" class="img_port">
+    <img src="imagens/arduino.jpg" alt="Imagem de arduino" class="img_port">
+    <img src="imagens/jogo.jpg" alt="Imagem do projeto de jogo" class="img_port">
+    <img src="imagens/barragem.jpg" alt="Imagem de barragem de água" class="img_port">
 
     <!-- Mapa de São Bernardo do Campo -->
     <h3>Mapa de São Bernardo do Campo</h3>
@@ -56,15 +61,15 @@
     <!-- Iframes de jogos que eu criei -->
     <h3>Confira alguns jogos criados por mim:</h3>
 
-    <h4>Duck Dank:</h4>
+    <h4 class="subtitle">Duck Dank:</h4>
     <p>Um jogo da velha divertido em que seu oponente é um tanto incomum: um pato chamado Duckdank. Teste suas habilidades estratégicas e divirta-se enfrentando esse adversário inusitado que odeia perder!</p>
     <iframe src="https://duckdankgo.web.app/" width="360" height="580"></iframe>
 
-    <h4>Charada:</h4>
+    <h4 class="subtitle">Charada:</h4>
     <p>Um jogo de charadas do tipo: O que é? O que é?. Ele gerava uma charada nova por dia, tinha um temporizador de 60s e uma ótima responsividade para dispositivos mobile. Infelizmente, perdi essa versão junto do meu Pendrive em 2023, mas ainda é possível conferir a versão disponível.</p>
     <iframe src="https://lauanda1327.github.io/Charada/" width="360" height="580"></iframe>
 
-    <h4>RPG Filosofia:</h4>
+    <h4 class="subtitle">RPG Filosofia:</h4>
     <p>Um jogo de RPG filosófico textual desenvolvido rapidamente para mim e minha equipe apresentar na aula de filosofia do dia seguinte. Apesar de simples e improvisado, os elementos narrativos podem explorar conceitos filosóficos de forma divertida.</p>
     <iframe src="https://lauanda1327.github.io/RPG_Liberdade/" width="360" height="580"></iframe>
   </body>
