@@ -1,0 +1,104 @@
+body{
+    background-color: lightgray;
+}
+#cabecalho{
+    background-color: bisque;
+    border: 3px solid blue;
+    height: 150px;
+}
+#logocplusplus{
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#logojava{
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+h1{
+    color: darkgreen;
+    position: absolute;
+    top: 40px;
+    left: 800px;
+}
+#menu{
+    background-color: lightskyblue;
+    height: 20px;
+    padding: 10px;
+    padding-left: 300px;
+}
+#menu a{
+    margin: 0 100px;
+    color: darkred;
+    text-decoration: none;
+}
+h2{
+    text-align: center;
+}
+p{
+    color: indigo;
+}
+.livros{
+    margin-left: 165px;
+    height:600px;
+}
+#book1, #book2, #book3{
+    width: 250px;
+    height: 400px;
+    margin: 0 100px;
+}
+#iframe_pai{
+    margin-left: 420px;
+}
+iframe{
+    width: 400px;
+    height: 400px;
+    margin: 0 40px;
+}
+table{
+    border: 5px dashed red;
+    margin-left: 740px;
+}
+td{
+    border: 1px solid red;
+    padding: 10px;
+}
+.name_t, .email_t{
+    color: red;
+}
+#bloco-amarelo{
+    width: 450px;
+    background-color: yellow;
+    margin-left: 700px;
+    margin-top: 40px;
+}
+.span1{
+    margin-left: 70px;
+    color:darkred;
+    font-weight: 700;
+}
+.p1{
+    color: black;
+}
+#rodape{
+    background-color: bisque;
+    width: 100%;
+}
+#l1{
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+#l2{
+    width: 100px;
+    height: 100px;
+}
+.s1{
+    display: inline;
+}
+.s2{
+    display: inline;
+}
