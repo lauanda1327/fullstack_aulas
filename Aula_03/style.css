@@ -1,0 +1,81 @@
+.solid{
+    border-style: solid;
+}
+.dotted{
+    border-style: dotted;
+}
+.dashed{
+    border-style: dashed;
+}
+.double{
+    border-style: double;
+}
+.box-shadow{
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 2px rgb(136, 14, 242);
+    padding: 8px;
+    cursor: pointer;
+}
+p:hover{
+    transform: scale(102%);
+    transition: 0.2s;
+}
+#d1,#d2,#d3,#d4{
+    border: 2px dotted black;
+    padding: 20px;
+
+}
+#d1{
+    background-color: #f5cea0;
+    margin:0 75% 0 0;
+}
+#d2{
+    background-color: #f9dd9e;
+    border-style: solid;
+}
+#d3{
+    background-color: #c2cf8d;
+}
+#d4{
+    background-color: #92b5c0;
+    text-align: center;
+}
+
+#display-block{
+    background-color: blue;
+}
+#display-inline{
+    background-color: yellow;
+}
+
+#absolute{
+    background-color: aquamarine;
+    position: absolute;
+    left: 150px;
+    top: 830px;
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+#relative{
+    background-color: salmon;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+#fixed{
+    background-color: greenyellow;
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
