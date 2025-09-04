@@ -1,0 +1,31 @@
+O que vou precisar:
+- um editor de texto, pode ser um bloco de notas desde que dê para escrever em XML 
+- emulation station, frontend / ambiente de testes, obviamente
+- Um editor de imagens, photoshop, gimp para criar imagens, até o canva deve servir bem
+- qualquer experiência em codificação, ou melhor, saber abrir e fechar uma tag XML <tag> </tag>
+- use imagens svg vetoriais em vez de png/jpg
+
+Arquivos de exemplo na pasta theme
+
+Existem três seções de navegação, chamadas views:
+- visualização do sistema
+- lista de jogos simples, sem dados
+- lista de jogos completa, com dados scrape, chamada de exibição detalhada
+
+Temas diferentes mostram dados scrape diferentes, dados que a lista de jogos pode exibir:
+md_description 
+md_developer
+md_genre
+md_image
+md_thumbnail
+md_lastplayed: Armazenado como ISO8601 formato de data e hora, por exemplo, 2023-03-17T19:14:12+00:00
+md_playcount
+md_players
+md_publisher
+md_rating
+md_marquee
+md_releasedate: Armazenado como formato de data ISO8601, por exemplo, 2023-03-17
+
+e a visualização de video que é uma extensão da visualização detalhada
+md_video
+

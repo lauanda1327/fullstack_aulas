@@ -1,0 +1,26 @@
+
+.container{
+    height: 300px;
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    /* align-items: center; */
+}
+.itens{
+    background-color: rgb(177, 95, 250);
+    padding: 10px;
+    margin: 10px;
+}
+#d5{
+    order: 1;
+    flex-grow: 4;
+}
+#d6{
+    order: -1;
+    flex-grow: 3;
+}
+#d8{
+    flex-basis: 100px;
+}
