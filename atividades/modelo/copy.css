@@ -86,19 +86,21 @@ td{
 #rodape{
     background-color: bisque;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
 }
 #l1{
     width: 100px;
     height: 100px;
-    display: inline;
 }
 #l2{
     width: 100px;
     height: 100px;
 }
-.s1{
-    display: inline;
+/* .s1{
+    
 }
 .s2{
-    display: inline;
-}
+    
+} */
