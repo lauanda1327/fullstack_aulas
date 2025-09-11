@@ -1,0 +1,134 @@
+/* zerar as propriedades é uma boa prática */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* inicio */
+header{
+    background-color: white;
+    box-shadow: 0px 0px 3px 2px #9b9898;
+}
+#cabecalho_logo{
+    height: 8vh;
+}
+#cabecalho_logo img{
+    position: relative;
+    top: 10px;
+    left: 490px;
+}
+nav{
+    height: 6.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #9b98988b;
+    padding: 12px;
+}
+.links{
+    color: #6d6d6da6;
+    font-size: 12.5px;
+    font-weight: 700;
+    margin: 2px 12px 0px 12px;
+    text-align: center;
+}
+/* parte2 */
+main{
+    padding: 10px 540px;
+}
+.container1{
+    display: flex;
+}
+.container1 div img{
+    width: 225px;
+}
+/* parte 3 */
+.container2 {
+    margin: 15px 0;
+}
+.texto_vermelho{
+    font-size: 12px;
+    color: red;
+}
+.divisao{
+    font-size: 12px;
+}
+.texto_preto_bold{
+    font-size: 12px;
+    font-weight: 700;
+}
+h1{
+    margin: 10px 0 80px 0;
+}
+/* parte 4 */
+.container3{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.caixa_bolo{
+    width: 145px;
+    box-shadow: 1px 1px 14px 0px gray;
+    /* border: 1px solid gray; */
+    height: 191px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 0 0;
+}
+.caixa_bolo img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+.caixa_bolo div{
+    padding: 9px 0px 0px 9px;
+}
+.caixa_bolo h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+/* continuando... */
+h2{
+    color: darkorange;
+    margin: 45px 0;
+}
+.section_caixa{
+    display: flex;
+}
+.section_caixa img{
+    border-radius: 12px;
+    margin:10px;
+}
+.caixa_maior h3{
+    margin: 8px 0 8px 0;
+    color: rgb(23, 23, 23);
+}
+.caixa_maior p{
+    color: rgb(68, 66, 66);
+}
+.caixinha{
+    display: flex;
+    align-items: center;
+}
+.caixinha h5{
+    font-weight: 100;
+     color: rgb(68, 66, 66);
+}
+/* footer */
+footer{
+    background-color: #dedfdf;
+    height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.sobre_nos a{
+    color: rgb(52, 52, 52);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 10px 0 10px;
+}
