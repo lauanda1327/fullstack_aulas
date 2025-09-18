@@ -1,0 +1,14 @@
+*{
+    margin: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: pink;
+}
+input{
+    border-radius: 6px;
+    border: 1px solid black;
+    outline: none;
+}

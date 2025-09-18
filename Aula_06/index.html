@@ -1,0 +1,60 @@
+<!-- Aula sobre funções -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo style.css -->
+    <title>Aula 06</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo</h1>
+    <p id="nome"></p>
+
+    <h2>Exercicio 1</h2>
+    <p id="resposta_e1"></p>
+
+    <input type="text" id="in_text">
+    <br>
+    <input type="button" id="in_button" value="Clique aqui 1" onclick="imprimirTexto()">
+    <br>
+    <input type="checkbox">
+    <br>
+    <input type="password">
+    <br>
+    <input type="color">
+    <br>
+    <input type="date">
+    <br>
+    <input type="textarea">
+
+    <h2>Exercicio 2</h2>
+    <input type="number" id="in_num">
+    <input type="button" value="Clique aqui" onclick="imprimirIncrementos()">
+    <p id="resposta_e2"></p>
+
+    <h2>Exercicio 3</h2>
+    <input type="number" id="in_1_ex3" placeholder="Numero 1">
+    <br>
+    <input type="number" id="in_2_ex3" placeholder="Numero 2">
+    <br>
+    <input type="button" value="Somar" onclick="imprimirSoma()">
+    <p id="resposta_e3"></p>
+    
+    <h2>Exercicio 4</h2>
+    <div onmouseover="imprimirCalculo()">
+        <input type="number" id="in_1_ex4" placeholder="Numero 1">
+        <input type="number" id="in_2_ex4" placeholder="Numero 2">
+    </div>
+    <p id="resposta_e4"></p>
+    
+
+
+
+
+
+
+
+    <script src="script.js" type="text/javascript"></script> <!-- Importa o arquivo script.js, dentro do body preferencialmente -->
+</body>
+</html>
