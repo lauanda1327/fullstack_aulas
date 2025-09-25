@@ -64,7 +64,6 @@ function EscreverNaTela(contexto, texto, espessura, corBorda, corLinha, posicaoX
 }
 
 criarRetangulo(ctx, "#9cfcd4", 300, 300, 0, 0)
-criarCirculo(ctx,"#f9ff40", 15, 0, 0, 150, 150)
 
 /* Exemplos de chamadas das funções
 criarRetangulo(ctx, "yellow", 20, 20, 10, 10) // ctx, corDeFundo, altura, largura, posicaoX, posicaoY
