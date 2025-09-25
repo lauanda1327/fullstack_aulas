@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+#canvas{
+    background-color: greenyellow;
+    border-radius: 4px;
+}
+#canvas2{
+    background-color: lightgrey;
+    border-radius: 4px;
+}
