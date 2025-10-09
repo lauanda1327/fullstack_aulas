@@ -23,21 +23,10 @@ function criarArco(contexto, raio, espessura, corDeBorda, posicaoX, posicaoY, an
     contexto.beginPath()
     contexto.lineWidth = espessura;
     contexto.strokeStyle = corDeBorda
-    contexto.arc(posicaoX, posicaoY, raio, (anguloInicial * Math.PI) / 180, (anguloFinal * Math.PI) / 180);
+    contexto.arc(posicaoX, posicaoY, raio, anguloFinal * Math.PI / 180, anguloInicial * Math.PI / 180);
     contexto.stroke();
     contexto.closePath()
 }
-function preencherArco(contexto, raio, espessura, corDeBorda, corDeFundo, posicaoX, posicaoY, anguloInicial, anguloFinal) {
-    contexto.beginPath()
-    contexto.lineWidth = espessura;
-    contexto.strokeStyle = corDeBorda
-    contexto.fillStyle = corDeFundo
-    contexto.arc(posicaoX, posicaoY, raio, (anguloInicial * Math.PI) / 180, (anguloFinal * Math.PI) / 180);
-    contexto.fill();
-    contexto.stroke();
-    contexto.closePath()
-}
-
 
 function criarLinha(contexto, espessura, corLinha, posicaoXInicial, posicaoYInicial, posicaoXFinal, posicaoYFinal) {
     contexto.beginPath()
@@ -59,19 +48,14 @@ function criarTriangulo(contexto, corDeFundo, posicaoX1, posicaoY1, posicaoX2, p
     contexto.closePath()
 }
 
-function EscreverNaTela(contexto, texto, espessura, corBorda, corLinha, posicaoX, posicaoY){
+function EscreverNaTela(contexto, tamanhoFonte,texto,corTexto,posicaoX,posicaoY){
     contexto.beginPath()
-    contexto.lineWidth = espessura
-    contexto.fillStyle = corLinha
-    contexto.strokeStyle = corBorda
-    contexto.font = "30px Arial"
-    contexto.textAlign = "center"
-    contexto.strokeText(texto, posicaoX, posicaoY)
+    contexto.font = `${tamanhoFonte}px Arial`
+    contexto.fillStyle = corTexto
     contexto.fillText(texto, posicaoX, posicaoY)
     contexto.closePath()
 }
-
-
+// exercicio1 -> manipulando formas geometricas
 
 canvas1 = document.getElementById("canvas1");
 ctx1 = canvas1.getContext("2d");
@@ -88,7 +72,6 @@ criarRetangulo(ctx1, "yellow", 30, 30, 0, 240)
 criarRetangulo(ctx1, "black", 30, 60, 240, 270)
 criarRetangulo(ctx1, "black", 30, 30, 270, 240)
 
-
 criarRetangulo(ctx1, "cyan", 30, 30, 0, 150)
 criarRetangulo(ctx1, "cyan", 30, 30, 0, 120)
 criarRetangulo(ctx1, "cyan", 15, 30, 270, 150)
@@ -101,7 +84,23 @@ criarLinha(ctx1, 1, "green",0,150,300,150)
 criarLinha(ctx1, 1, "red",300,0,150,150)
 criarLinha(ctx1, 1, "blue",0,0,150,150)
 
-// Exercio dois casa e arvores
+criarCirculo(ctx1, 15, 1, "cyan", "blue", 150, 110)
+criarCirculo(ctx1, 15, 1, "yellow", "green", 70, 220)
+criarCirculo(ctx1, 15, 1, "yellow", "green", 230, 220)
+
+criarLinha(ctx1, 1, "green",150,150,150,300)
+criarCirculo(ctx1, 40, 1, "cyan", "green", 150, 300)
+
+// arcos
+criarArco(ctx1, 65, 1, "green", 150, 150, 0, 180)
+criarArco(ctx1, 80, 1, "green", 150, 150, 0, 315)
+criarArco(ctx1, 80, 1, "green", 150, 150, 225, 180)
+criarArco(ctx1, 60, 1, "green", 150, 300, 0, 270)
+criarArco(ctx1, 80, 1, "green", 150, 300, 270, 180)
+
+EscreverNaTela(ctx1,20,"Canvas", "black", 110, 40)
+
+// Exercicio 2 -> casa, rio, sol, céu, terra e arvores
 // cor de fundo
 criarRetangulo(ctx2, "#8ffdd4", 300, 300, 0, 0)
 // chão
@@ -125,4 +124,6 @@ criarCirculo(ctx2, 25, 0, "#318a26", "#318a26", 269, 212)
 criarCirculo(ctx2, 25, 0, "#318a26", "#318a26", 55, 172)
 // rio
 criarRetangulo(ctx2, '#458efc',100,45,0,230)
-criarArco(ctx2, 44, 2, '458efc', 0, 230, -90, -0)
+criarRetangulo(ctx2, '#458efc',45,120,0,270)
+criarCirculo(ctx2, 44, 0, '#458efc', '#458efc', 0, 230)
+criarCirculo(ctx2, 30, 0, '#458efc', '#458efc', 120, 300)
