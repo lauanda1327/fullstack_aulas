@@ -12,7 +12,11 @@ body{
     align-items: center;
     height: 100vh;
 }
-#canvas, #canvas2{
+.caixa_h1{
+    text-align: center;
+    margin: 5px
+}
+#canvas1, #canvas2{
     border: 1px solid black;
     border-radius: 4px;
     margin: 10px;
