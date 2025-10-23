@@ -1,0 +1,23 @@
+{
+  "name": "servidor",
+  "version": "0.1.0",
+  "description": "meu primeiro projeto de full stack",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauanda1327/fullstack_aulas.git"
+  },
+  "author": "lauanda nobre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauanda1327/fullstack_aulas/issues"
+  },
+  "homepage": "https://github.com/lauanda1327/fullstack_aulas#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^5.1.0"
+  }
+}
