@@ -32,7 +32,7 @@ let imagem = {
     altura: 10,
     img: new Image(),
     desenhar: function(){
-        this.img.src = 'personagem2.png';
+        this.img.src = 'personagem.png';
         ctx.beginPath();
         // drawImage(image, dx, dy, dWidth, dHeight)
         ctx.drawImage(this.img, this.x, this.y, 150, 150)
@@ -75,8 +75,8 @@ animacao();
 
 document.addEventListener("mousemove", function(evento){
     let rect = canvas.getBoundingClientRect();
-    let x_mouse = evento.clientX - rect.left;
-    let y_mouse = evento.clientY - rect.top;
+    let x_mouse = evento.clientX - rect.left - 78;
+    let y_mouse = evento.clientY - rect.top - 78;
     //console.log(x_mouse, y_mouse)
 
     imagem.x = x_mouse
