@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body{
@@ -12,4 +13,8 @@ body{
 }
 #canvas{
     border: 1px solid black;
+}
+h1{
+    text-align: center;
+    margin: 6px;
 }
