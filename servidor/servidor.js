@@ -14,11 +14,11 @@ console.log("servidor rodando...".rainbow);
 // aula 2 sobre servidores -> métodos GET e POST e templates
 
 app.get('/', function(requisicao, resposta){
-    resposta.redirect('index.html')
+    resposta.redirect('projects.html')
 })
 
-app.get('/oi', function(requisicao, resposta){
-    resposta.redirect('oi.html')
+app.get('/aula10', function(requisicao, resposta){
+    resposta.redirect('aula10.html')
 })
 
 app.get('/cadastrar', function(requisicao, resposta){
@@ -50,4 +50,12 @@ app.get('/for', function(requisicao,resposta){
     let qtde = requisicao.query.qtde;
     console.log(qtde)
     resposta.render('for.ejs',{qtde})
+})
+
+// atividade lab 8 - servidor get, post e template
+
+
+
+app.get('/login', function(requisicao, resposta){
+    resposta.redirect('login.html')
 })
