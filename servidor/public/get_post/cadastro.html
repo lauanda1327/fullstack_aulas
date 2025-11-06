@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Cadastro de Usuário</title>
   <style>
     body {
       font-family: 'Courier New', Courier, monospace, sans-serif;
@@ -39,12 +39,12 @@
   </style>
 </head>
 <body>
-  <h1>Login</h1>
-  <form action="/verifica-login" method="POST">
+  <h1>Cadastro de Usuário</h1>
+  <form action="/cadastro-usuario" method="POST">
+    <input type="text" name="nome" placeholder="Nome" required>
     <input type="email" name="email" placeholder="E-mail" required>
     <input type="password" name="senha" placeholder="Senha" required>
-    <button type="submit">Acessar</button>
+    <button type="submit">Cadastrar</button>
   </form>
-  <p>Não tem uma conta? <a href="/cadastra">Cadastre-se aqui</a></p>
 </body>
 </html>

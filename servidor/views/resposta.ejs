@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Resposta usando template ejs</title>
-    <link rel="stylesheet" href="styleaula10.css">
+  <meta charset="UTF-8">
+  <title>Resposta</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+      background-color: #9466ed;
+      color: #333;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #700bc2;
+      font-size: 1.25rem;
+    }
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 1px solid black;
+      box-shadow: 2px 4px 2px #000000;
+      width: 300px;
+    }
+    .info {
+      text-align: left;
+      margin-top: 5px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #880af6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #6c09ed;
+    }
+  </style>
 </head>
 <body>
-    <h1>Usuario cadastrado com sucesso!</h1>
-    <p>método utilizado: <%= metodo %></p>
-    <p>O nome do usuario é <%= nome %></p>
-    <p>O email do usuario é <%= email %></p>
-    <p>O telefone do usuario é <%= telefone %></p>
-    <p>A data de nascimento do usuario é <%= nascimento %></p>
+  <div class="card">
+    <h1><%= status %></h1>
 
+    <% if (nome && nome !== '') { %>
+      <div class="info">
+        <p><strong>Nome:</strong> <%= nome %></p>
+        <p><strong>Email:</strong> <%= email %></p>
+        <p><strong>Senha:</strong> <%= senha %></p>
+      </div>
+    <% } %>
+
+    <a href="/">Voltar</a>
+  </div>
 </body>
 </html>

@@ -3,6 +3,21 @@ require("colors");
 var http = require("http");
 var express = require("express")
 
+var mongodb = require("mongodb");
+const MongoClient = mongodb.MongoClient;
+const uri = 'mongodb+srv://lauandanobre_db_user:T1kD9AcTwWw1kh4R@batata.w5rxisv.mongodb.net/?appName=batata';
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
+// 200.232.90.170
+// lauandanobre_db_user
+// T1kD9AcTwWw1kh4R
+
+var dbo = client.db("lauandanobre_db_user");
+var usuarios = dbo.collection("usuarios");
+
+
+
+
 var app = express();
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
@@ -52,10 +67,4 @@ app.get('/for', function(requisicao,resposta){
     resposta.render('for.ejs',{qtde})
 })
 
-// atividade lab 8 - servidor get, post e template
 
-
-
-app.get('/login', function(requisicao, resposta){
-    resposta.redirect('login.html')
-})
