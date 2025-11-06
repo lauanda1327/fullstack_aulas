@@ -37,7 +37,7 @@ app.get('/cadastra', function (req, res) {
 
 
 app.get('/login', function (req, res) {
-  res.redirect('get_post/login2.html'); 
+  res.redirect('get_post/login.html'); 
 });
 
 
