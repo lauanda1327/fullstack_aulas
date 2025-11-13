@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(181, 135, 222);
+}
+
+form{
+    background-color: #9405ff2e;
+    padding: 12px;
+    border-radius: 14px;
+}
+
+div{
+    display: inline;
+    background-color: rgb(181, 135, 222);
+    margin: 10px;
+    padding: 10px;
+}
+
+input{
+    outline: none;
+    border-radius: 4px;
+}
