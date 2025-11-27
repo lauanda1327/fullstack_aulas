@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resposta</title>
+  <link rel="stylesheet" href="estilo_gerencia.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resposta da Operação</h1>
+    <div class="resposta <%= resposta.includes('sucesso') ? 'sucesso' : 'erro' %>">
+      <%= resposta %>
+    </div>
+    <div class="links">
+      <a href="/gerencia_carros">Voltar para Gerenciamento</a>
+      <a href="/carros">Ver Carros Disponíveis</a>
+      <a href="/projects.html">Voltar para Projetos</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login de Usuário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login de Usuário</h1>
+    
+    <div id="message" class="info-message" style="display: none;"></div>
+    
+    <form action="/logar_usuario" method="POST" class="formulario">
+      <label for="login">Login:</label>
+      <input type="text" id="login" name="login" placeholder="Digite seu login">
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+
+      <button type="submit" class="botao">Entrar</button>
+    </form>
+    
+    <div class="links">
+      <a href="/cadastro_usuario.html">Não tem conta? Cadastre-se</a>
+      <a href="/projects.html">Voltar para Projetos</a>
+    </div>
+  </div>
+
+</body>
+</html>

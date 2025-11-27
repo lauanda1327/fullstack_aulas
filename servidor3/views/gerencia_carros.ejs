@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciar Carros</title>
+  <link rel="stylesheet" href="estilo_gerencia.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciar Carros</h1>
+    <div class="user-info">
+      Bem-vindo, <strong><%= usuario %></strong> | 
+      <a href="/login_usuario.html">Sair</a>
+    </div>
+    
+    <% if (erro) { %>
+      <div class="erro"><%= erro %></div>
+    <% } %>
+    
+    <!-- Formulário de Cadastro -->
+    <div class="form-section">
+      <h2>Cadastrar Novo Carro</h2>
+      <form action="/cadastrar_carro" method="POST" class="formulario">
+        <input type="text" name="marca" placeholder="Marca" required>
+        <input type="text" name="modelo" placeholder="Modelo" required>
+        <input type="number" name="ano" placeholder="Ano" required>
+        <input type="number" name="qtde_disponivel" placeholder="Quantidade" required>
+        <button type="submit" class="botao">Cadastrar Carro</button>
+      </form>
+    </div>
+    
+    <!-- Formulário de Remoção -->
+    <div class="form-section">
+      <h2>Remover Carro</h2>
+      <form action="/remover_carro" method="POST" class="formulario">
+        <input type="text" name="marca" placeholder="Marca" required>
+        <input type="text" name="modelo" placeholder="Modelo" required>
+        <button type="submit" class="botao perigo">Remover Carro</button>
+      </form>
+    </div>
+    
+    <!-- Formulário de Atualização -->
+    <div class="form-section">
+      <h2>Atualizar Carro</h2>
+      <form action="/atualizar_carro" method="POST" class="formulario">
+        <input type="text" name="marca" placeholder="Marca" required>
+        <input type="text" name="modelo" placeholder="Modelo" required>
+        <input type="number" name="ano" placeholder="Novo Ano" required>
+        <input type="number" name="qtde_disponivel" placeholder="Nova Quantidade" required>
+        <button type="submit" class="botao">Atualizar Carro</button>
+      </form>
+    </div>
+    
+    <!-- Formulário de Venda -->
+    <div class="form-section">
+      <h2>Vender Carro</h2>
+      <form action="/vender_carro" method="POST" class="formulario">
+        <input type="text" name="marca" placeholder="Marca" required>
+        <input type="text" name="modelo" placeholder="Modelo" required>
+        <button type="submit" class="botao venda">Vender Carro</button>
+      </form>
+    </div>
+    
+    <!-- Lista de Carros -->
+    <div class="carros-grid">
+      <h2>Carros Cadastrados</h2>
+      <% carros.forEach(function(carro) { %>
+        <div class="carro-card <%= carro.qtde_disponivel === 0 ? 'esgotado' : '' %>">
+          <h3><%= carro.marca %> <%= carro.modelo %></h3>
+          <p>Ano: <%= carro.ano %></p>
+          <p class="quantidade <%= carro.qtde_disponivel === 0 ? 'esgotado-texto' : '' %>">
+            Quantidade: <%= carro.qtde_disponivel %>
+            <% if (carro.qtde_disponivel === 0) { %>
+              <span class="aviso-esgotado">ESGOTADO</span>
+            <% } %>
+          </p>
+        </div>
+      <% }); %>
+    </div>
+    
+    <div class="links">
+      <a href="/carros?usuario=<%= encodeURIComponent(usuario) %>">Ver Carros Disponíveis</a>
+      <a href="/projects.html">Voltar para Projetos</a>
+    </div>
+  </div>
+</body>
+</html>

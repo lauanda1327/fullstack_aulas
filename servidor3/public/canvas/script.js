@@ -1,0 +1,129 @@
+// Exercicio 2 e 3
+
+function criarRetangulo(contexto, corDeFundo,altura, largura, posicaoX, posicaoY) {
+    contexto.beginPath()
+    contexto.fillStyle = corDeFundo
+    contexto.fillRect(posicaoX, posicaoY, largura, altura)
+    contexto.closePath()
+}
+
+function criarCirculo(contexto, raio, espessura, corDeFundo, corDeBorda, posicaoX, posicaoY) {
+    contexto.beginPath()
+    contexto.lineWidth = espessura;
+    contexto.fillStyle = corDeFundo
+    contexto.strokeStyle = corDeBorda
+    contexto.arc(posicaoX, posicaoY, raio, 0, 2 * Math.PI);
+    contexto.fill();
+    contexto.stroke();
+    contexto.closePath()
+}
+
+
+function criarArco(contexto, raio, espessura, corDeBorda, posicaoX, posicaoY, anguloInicial, anguloFinal) {
+    contexto.beginPath()
+    contexto.lineWidth = espessura;
+    contexto.strokeStyle = corDeBorda
+    contexto.arc(posicaoX, posicaoY, raio, anguloFinal * Math.PI / 180, anguloInicial * Math.PI / 180);
+    contexto.stroke();
+    contexto.closePath()
+}
+
+function criarLinha(contexto, espessura, corLinha, posicaoXInicial, posicaoYInicial, posicaoXFinal, posicaoYFinal) {
+    contexto.beginPath()
+    contexto.lineWidth = espessura
+    contexto.strokeStyle = corLinha
+    contexto.moveTo(posicaoXInicial, posicaoYInicial)
+    contexto.lineTo(posicaoXFinal, posicaoYFinal)
+    contexto.stroke()
+    contexto.closePath()
+}
+
+function criarTriangulo(contexto, corDeFundo, posicaoX1, posicaoY1, posicaoX2, posicaoY2, posicaoX3, posicaoY3) {
+    contexto.beginPath()
+    contexto.fillStyle = corDeFundo
+    contexto.moveTo(posicaoX1, posicaoY1)
+    contexto.lineTo(posicaoX2, posicaoY2)
+    contexto.lineTo(posicaoX3, posicaoY3)
+    contexto.fill()
+    contexto.closePath()
+}
+
+function EscreverNaTela(contexto, tamanhoFonte,texto,corTexto,posicaoX,posicaoY){
+    contexto.beginPath()
+    contexto.font = `${tamanhoFonte}px Arial`
+    contexto.fillStyle = corTexto
+    contexto.fillText(texto, posicaoX, posicaoY)
+    contexto.closePath()
+}
+// exercicio1 -> manipulando formas geometricas
+
+canvas1 = document.getElementById("canvas1");
+ctx1 = canvas1.getContext("2d");
+canvas2 = document.getElementById("canvas2");
+ctx2 = canvas2.getContext("2d");
+
+
+criarRetangulo(ctx1, "white", 300, 300, 0, 0);
+criarRetangulo(ctx1, "blue", 50, 50, 0, 0);
+criarRetangulo(ctx1, "red", 50, 50, 250, 0)
+criarRetangulo(ctx1, "yellow", 30, 60, 0, 270)
+criarRetangulo(ctx1, "yellow", 30, 30, 0, 240)
+
+criarRetangulo(ctx1, "black", 30, 60, 240, 270)
+criarRetangulo(ctx1, "black", 30, 30, 270, 240)
+
+criarRetangulo(ctx1, "cyan", 30, 30, 0, 150)
+criarRetangulo(ctx1, "cyan", 30, 30, 0, 120)
+criarRetangulo(ctx1, "cyan", 15, 30, 270, 150)
+criarRetangulo(ctx1, "cyan", 15, 30, 270, 135)
+
+criarRetangulo(ctx1, "red", 40, 40, 110, 150)
+
+criarLinha(ctx1, 1, "green",0,150,300,150)
+
+criarLinha(ctx1, 1, "red",300,0,150,150)
+criarLinha(ctx1, 1, "blue",0,0,150,150)
+
+criarCirculo(ctx1, 15, 1, "cyan", "blue", 150, 110)
+criarCirculo(ctx1, 15, 1, "yellow", "green", 70, 220)
+criarCirculo(ctx1, 15, 1, "yellow", "green", 230, 220)
+
+criarLinha(ctx1, 1, "green",150,150,150,300)
+criarCirculo(ctx1, 40, 1, "cyan", "green", 150, 300)
+
+// arcos
+criarArco(ctx1, 65, 1, "green", 150, 150, 0, 180)
+criarArco(ctx1, 80, 1, "green", 150, 150, 0, 315)
+criarArco(ctx1, 80, 1, "green", 150, 150, 225, 180)
+criarArco(ctx1, 60, 1, "green", 150, 300, 0, 270)
+criarArco(ctx1, 80, 1, "green", 150, 300, 270, 180)
+
+EscreverNaTela(ctx1,20,"Canvas", "black", 110, 40)
+
+// Exercicio 2 -> casa, rio, sol, céu, terra e arvores
+// cor de fundo
+criarRetangulo(ctx2, "#8ffdd4", 300, 300, 0, 0)
+// chão
+criarRetangulo(ctx2, "#808080", 70, 300, 0, 230)
+// sol
+criarCirculo(ctx2, 40, 0, '#fcff2d', '#fcff2d',230, 70)
+// casa
+criarRetangulo(ctx2, "#86471a", 80, 75, 110, 150)
+// janelas
+criarRetangulo(ctx2, "#47bdfd", 22, 22, 156, 168)
+criarRetangulo(ctx2, "#47bdfd", 22, 22, 117, 168)
+// porta
+criarRetangulo(ctx2, "#624423", 40, 14, 140, 190)
+// teto
+criarTriangulo(ctx2, "#f5694d",110, 150,184, 150,146,110)
+// arvores
+criarRetangulo(ctx2, "#86471a", 50, 18, 260, 220)
+criarRetangulo(ctx2, "#86471a", 50, 18, 45, 180)
+// copa das arvores
+criarCirculo(ctx2, 25, 0, "#318a26", "#318a26", 269, 212)
+criarCirculo(ctx2, 25, 0, "#318a26", "#318a26", 55, 172)
+// rio
+criarRetangulo(ctx2, '#458efc',100,45,0,230)
+criarRetangulo(ctx2, '#458efc',45,120,0,270)
+criarCirculo(ctx2, 44, 0, '#458efc', '#458efc', 0, 230)
+criarCirculo(ctx2, 30, 0, '#458efc', '#458efc', 120, 300)

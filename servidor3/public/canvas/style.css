@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: rgb(138, 8, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.caixa_h1{
+    text-align: center;
+    margin: 5px
+}
+#canvas1, #canvas2{
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+}

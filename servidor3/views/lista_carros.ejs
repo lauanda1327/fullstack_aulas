@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carros Disponíveis</title>
+  <link rel="stylesheet" href="estilo_gerencia.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Carros Disponíveis</h1>
+    <div class="user-info">
+      Bem-vindo, <strong><%= usuario %></strong> | 
+      <a href="/login_usuario.html">Sair</a>
+    </div>
+    
+    <% if (erro) { %>
+      <div class="erro"><%= erro %></div>
+    <% } %>
+    
+    <div class="carros-grid">
+      <% carros.forEach(function(carro) { %>
+        <div class="carro-card <%= carro.qtde_disponivel === 0 ? 'esgotado' : '' %>">
+          <h3><%= carro.marca %> <%= carro.modelo %></h3>
+          <p>Ano: <%= carro.ano %></p>
+          <p class="quantidade <%= carro.qtde_disponivel === 0 ? 'esgotado-texto' : '' %>">
+            Quantidade: <%= carro.qtde_disponivel %>
+            <% if (carro.qtde_disponivel === 0) { %>
+              <span class="aviso-esgotado">ESGOTADO</span>
+            <% } %>
+          </p>
+        </div>
+      <% }); %>
+    </div>
+    
+    <div class="links">
+      <a href="/gerencia_carros?usuario=<%= encodeURIComponent(usuario) %>">Gerenciar Carros</a>
+      <a href="/projects.html">Voltar para Projetos</a>
+    </div>
+  </div>
+</body>
+</html>
