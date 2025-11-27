@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Resposta Usuário</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-        <h1>Resposta Usuário</h1>
-        <p>Resposta: <%= resposta %>  </p>
-
-    </body>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resposta</title>
+  <link rel="stylesheet" href="estilo_gerencia.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resposta</h1>
+    
+    <div class="resposta <%= resposta.includes('sucesso') ? 'sucesso' : (resposta.includes('Erro') ? 'erro' : 'info') %>">
+      <%= resposta %>
+    </div>
+    
+    <div class="links">
+      <% if (resposta.includes('logado com sucesso')) { %>
+        <a href="/carros">Ir para Lista de Carros</a>
+      <% } else if (resposta.includes('cadastrado com sucesso')) { %>
+        <a href="/login_usuario.html">Fazer Login</a>
+      <% } else if (resposta.includes('não encontrado')) { %>
+        <a href="/cadastro_usuario.html">Cadastrar Usuário</a>
+        <a href="/login_usuario.html">Tentar Login Novamente</a>
+      <% } else { %>
+        <a href="/cadastro_usuario.html">Cadastrar Usuário</a>
+        <a href="/login_usuario.html">Fazer Login</a>
+      <% } %>
+      <a href="/projects.html">Voltar para Projetos</a>
+    </div>
+  </div>
+</body>
 </html>

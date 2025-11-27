@@ -2,7 +2,7 @@
 var http = require('http');         // Módulo para criar servidor HTTP
 var express = require('express');   // Framework web Express
 var bodyParser = require('body-parser'); // Middleware para processar dados do corpo das requisições
-var colors = require('colors');     // Módulo para colorir textos no console
+//var colors = require('colors');     // Módulo para colorir textos no console
 
 
 // Inicializa uma nova aplicação Express
